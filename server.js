@@ -4,7 +4,14 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser'); //req.body
 const cors = require('cors'); //cross origin resource sharing 
+const mongoose = require('mongoose');
+const uriUtil = require('mongodb-uri');
 let contacts = require('./data');
+
+const mongodbUri = 'mongodb://umma:gohil123@ds121289.mlab.com:21289/saving-db';
+const mongooseUri = uriUtil.formatMongoose(mongodbUri)
+const dbOptions = {};
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -67,5 +74,11 @@ const hostname = 'localhost';
 const port = 3001;
 
 app.listen(port, hostname, () => {
+    mongoose.connect(mongooseUri, dbOptions, (err) => {
+        if(err) {
+            console.log(err)
+        }
     console.log(`Server is running at http://${hostname}:${port}`);
+    })
+
 })
