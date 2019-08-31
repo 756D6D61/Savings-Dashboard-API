@@ -11,6 +11,7 @@ const mongodbUri = 'mongodb://umma:gohil123@ds121289.mlab.com:21289/saving-db';
 const mongooseUri = uriUtil.formatMongoose(mongodbUri)
 const dbOptions = {};
 
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
@@ -20,8 +21,9 @@ app.use('/api/contacts', require('./api/contacts/routes/get_contacts'));
 app.use('/api/contacts', require('./api/contacts/routes/get_contact'));
 app.use('/api/contacts', require('./api/contacts/routes/delete_contact'));
 
+
 const hostname = 'localhost';
-const port = 3001;
+const port = 3001 || process.env.PORT;
 const server = app.listen(port, hostname, () => {
 
   mongoose.connect(mongooseUri, dbOptions, (err) => {
@@ -32,3 +34,6 @@ const server = app.listen(port, hostname, () => {
   });
   
 });
+
+module.exports = app;
+
