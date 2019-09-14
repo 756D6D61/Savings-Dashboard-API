@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "savingsdashboard-api-executor",
+    "name": "savingsdashboard-api",
+    "region": "eu-central-1"
+  },
+  "api": {
+    "id": "9tm51w73ze"
+  }
+}

@@ -16,10 +16,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use('/api/contacts', require('./api/contacts/routes/post_contact'));
-app.use('/api/contacts', require('./api/contacts/routes/get_contacts'));
-app.use('/api/contacts', require('./api/contacts/routes/get_contact'));
-app.use('/api/contacts', require('./api/contacts/routes/delete_contact'));
+app.use('/api/savings', require('./api/savings/routes/post_savings'));
+app.use('/api/savings', require('./api/savings/routes/get_save'));
+app.use('/api/savings', require('./api/savings/routes/get_savings'));
+app.use('/api/savings', require('./api/savings/routes/delete_savings'));
 
 
 const hostname = 'localhost';
