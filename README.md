@@ -1,5 +1,6 @@
 https://o39ren2sp5.execute-api.us-west-1.amazonaws.com/latest/api/contacts
 
+https://9tm51w73ze.execute-api.eu-central-1.amazonaws.com/latest/api/savings
 # How to Deploy to AWS
 * npm install claudia
 * add module.exports = app; to the end of the server file
@@ -7,5 +8,5 @@ https://o39ren2sp5.execute-api.us-west-1.amazonaws.com/latest/api/contacts
 * claudia generate-serverless-express-proxy --express-module server (for lambda file)
 * aws configure in terminal (add access key and secret access key)
 * claudia create --handler lambda.handler --deploy-proxy-api --region eu-central-1
-
+claudia update --handler lambda.handler --deploy-proxy-api --region eu-central-1
  
