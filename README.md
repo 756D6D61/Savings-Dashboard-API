@@ -1,12 +1,23 @@
-https://o39ren2sp5.execute-api.us-west-1.amazonaws.com/latest/api/contacts
 
-https://9tm51w73ze.execute-api.eu-central-1.amazonaws.com/latest/api/savings
-# How to Deploy to AWS
-* npm install claudia
-* add module.exports = app; to the end of the server file
-* install aws-sdk and aws-serverless-express via npm 
-* claudia generate-serverless-express-proxy --express-module server (for lambda file)
-* aws configure in terminal (add access key and secret access key)
-* claudia create --handler lambda.handler --deploy-proxy-api --region eu-central-1
-claudia update --handler lambda.handler --deploy-proxy-api --region eu-central-1.
- 
+# 💳Savings Dashboard API
+This API is the back-end for the Savings Dashboard project and utilises Node.js.
+
+### 📋Aims of App
+* Enable the front-end to be able to pull data stored in the API through various different end points, such as account_name, interest etc.
+
+* Allow functionality such as GET, POST and DELETE
+
+* The ability to view each invidual account details 
+
+### 👩‍💻Technical Details
+* Node.js
+* Express Server
+* Mongo DB
+* AWS 
+
+### 🔧How to Run the App
+* To run this API locally: node server.js
+* To view this API deployed on AWS: https://9tm51w73ze.execute-api.eu-central-1.amazonaws.com/latest/api/savings
+
+### 💭Future Improvements
+* More end-points as front-end functionality increases 
