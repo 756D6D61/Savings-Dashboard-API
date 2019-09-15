@@ -4,9 +4,7 @@ This API is the back-end for the Savings Dashboard project and utilises Node.js.
 
 ### 📋Aims of App
 * Enable the front-end to be able to pull data stored in the API through various different end points, such as account_name, interest etc.
-
 * Allow functionality such as GET, POST and DELETE
-
 * The ability to view each invidual account details 
 
 ### 👩‍💻Technical Details
