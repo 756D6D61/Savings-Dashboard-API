@@ -14,7 +14,7 @@ This API is the back-end for the Savings Dashboard project and utilises Node.js.
 * AWS 
 
 ### 🔧How to Run the App
-* To run this API locally: node server.js
+* To run this API locally: `node server.js`
 * To view this API deployed on AWS: https://9tm51w73ze.execute-api.eu-central-1.amazonaws.com/latest/api/savings
 
 ### 💭Future Improvements
